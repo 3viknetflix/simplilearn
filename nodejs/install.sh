@@ -7,6 +7,7 @@ nvm install 16
 npm init --y
 npm install --save mysql
 npm install --save express
+npm install --save ejs
 sudo yum -y install mariadb
 
 nvm install 16
