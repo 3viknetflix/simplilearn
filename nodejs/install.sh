@@ -5,6 +5,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 nvm install --lts
 nvm install 16
 
+cd simplilearn/nodejs
 npm init --y
 npm install --save mysql
 npm install --save express
@@ -13,5 +14,4 @@ sudo yum -y install mariadb
 
 npm install forever -g
 npm install forever-monitor
-cd simplilearn/nodejs
 forever start app.js
