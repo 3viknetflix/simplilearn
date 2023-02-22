@@ -13,4 +13,5 @@ sudo yum -y install mariadb
 
 npm install forever -g
 npm install forever-monitor
+cd simplilearn/nodejs
 forever start app.js
