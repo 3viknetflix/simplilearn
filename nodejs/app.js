@@ -8,7 +8,7 @@ const app = express();
 
 const mysql = require('mysql');
 const connection = mysql.createConnection({
-  host: 'vikdb.cnfmgqhcxpad.us-east-1.rds.amazonaws.com',
+  host: 'vikdb.cdfyfdrgxmjx.us-east-1.rds.amazonaws.com',
   user: 'vik',
   password: 'vikkeypair123',
   database: 'employee'
