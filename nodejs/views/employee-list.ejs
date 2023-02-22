@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Employee Database</title>
+</head>
+<body>
+    <div class="table-data">
+	<h2>Employee Database - Served by <%=hname; %> </h2>
+    <table border="5">        <tr>
+            <th>Employee ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>City</th>
+            <th>Delete</th>
+        </tr>
+
+        <%
+        if(dbRows.length!=0){
+        var i=1;
+        dbRows.forEach(function(data){
+        %>
+        <tr>
+            <td><%=data.empID; %></td>
+            <td><%=data.FirstName %></td>
+            <td><%=data.LastName %></td>
+            <td><%=data.Email %></td>
+            <td><%=data.City %></td>
+            <td>
+		<form action="/deleteEmployee">
+			<input type="text" hidden name="empID" value=<%=data.empID; %>>
+			<button>Delete</button>
+		</form>
+	    </td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+
+<h2> Add Employee </h2>
+<form action="/addEmployee" method="POST">
+    <!-- Creating the parameter Username as type= "text"-->
+    <label>First Name: </label>
+    <input type="text" placeholder="First Name" name="fname"><br><br>
+    <label>Last Name: </label>
+    <input type="text" placeholder="Last Name" name="lname"><br><br>
+    <!-- Creating the parameter Email as type= "text"-->
+    <label>Email: </label>
+    <input type="email" placeholder="Email" name="email"><br><br>
+    <label>City: </label>
+    <input type="text" placeholder="City" name="city"><br><br>
+    <!-- Creating the submit button -->
+    <button>Submit</button>
+</form>
+
+</body>
+</html>
