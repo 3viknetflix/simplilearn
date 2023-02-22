@@ -4,8 +4,6 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 nvm install --lts
 nvm install 16
 
-mkdir nodejs-mysql
-cd nodejs-mysql
 npm init --y
 npm install --save mysql
 npm install --save express
